@@ -1,0 +1,59 @@
+Classfile /Users/jasonren/code/JavaLearn/src/main/java/cn/jasonren/javalearn/multiThread/SynchronizedTest/SyncMethod.class
+  Last modified 2018-8-27; size 335 bytes
+  MD5 checksum 951c03bc0aa7e6df8a7143fd1d9207c4
+  Compiled from "SyncMethod.java"
+public class cn.jasonren.javalearn.multiThread.SynchronizedTest.SyncMethod
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #4.#14         // java/lang/Object."<init>":()V
+   #2 = Fieldref           #3.#15         // cn/jasonren/javalearn/multiThread/SynchronizedTest/SyncMethod.i:I
+   #3 = Class              #16            // cn/jasonren/javalearn/multiThread/SynchronizedTest/SyncMethod
+   #4 = Class              #17            // java/lang/Object
+   #5 = Utf8               i
+   #6 = Utf8               I
+   #7 = Utf8               <init>
+   #8 = Utf8               ()V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               syncTask
+  #12 = Utf8               SourceFile
+  #13 = Utf8               SyncMethod.java
+  #14 = NameAndType        #7:#8          // "<init>":()V
+  #15 = NameAndType        #5:#6          // i:I
+  #16 = Utf8               cn/jasonren/javalearn/multiThread/SynchronizedTest/SyncMethod
+  #17 = Utf8               java/lang/Object
+{
+  public int i;
+    descriptor: I
+    flags: ACC_PUBLIC
+
+  public cn.jasonren.javalearn.multiThread.SynchronizedTest.SyncMethod();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 3: 0
+
+  public synchronized void syncTask();
+    descriptor: ()V
+    flags: ACC_PUBLIC, ACC_SYNCHRONIZED
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: dup
+         2: getfield      #2                  // Field i:I
+         5: iconst_1
+         6: iadd
+         7: putfield      #2                  // Field i:I
+        10: return
+      LineNumberTable:
+        line 7: 0
+        line 8: 10
+}
+SourceFile: "SyncMethod.java"
